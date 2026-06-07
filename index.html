@@ -3,51 +3,82 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sito Demo</title>
+    <meta name="description" content="Portfolio personale - Progetti, competenze e contatti">
+    <title>Portfolio — Tuo Nome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
-        <h1 class="logo">Sito Demo</h1>
-        <button class="nav-toggle" aria-label="Apri menu">☰</button>
+      <div class="container header-inner">
+        <h1 class="logo">Tuo Nome</h1>
         <nav class="nav">
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#features">Caratteristiche</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Progetti</a></li>
             <li><a href="#contact">Contatti</a></li>
           </ul>
         </nav>
+        <button class="nav-toggle" aria-label="Apri menu">☰</button>
       </div>
     </header>
 
     <main>
       <section id="home" class="hero container">
-        <h2>Benvenuto</h2>
-        <p>Un sito web semplice creato per te.</p>
-        <a class="btn" href="#contact">Contattaci</a>
+        <div class="hero-inner">
+          <img class="avatar" src="https://via.placeholder.com/150" alt="Foto profilo">
+          <div>
+            <h2>Ciao, sono Tuo Nome</h2>
+            <p>Frontend developer / Designer — Creo esperienze web piacevoli e performanti.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#projects">Vedi i progetti</a>
+              <a class="btn btn-outline" href="#contact">Contattami</a>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="features" class="container features">
-        <h3>Caratteristiche</h3>
-        <div class="grid">
-          <article>
-            <h4>Responsive</h4>
-            <p>Adattabile a tutti i dispositivi.</p>
+      <section id="about" class="container about">
+        <h3>About</h3>
+        <p>Sono uno sviluppatore web con passione per interfacce pulite e accessibili. Mi piace costruire prodotti che risolvono problemi reali e che siano semplici da usare.</p>
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React</span>
+        </div>
+      </section>
+
+      <section id="projects" class="container projects">
+        <h3>Progetti</h3>
+        <div class="projects-grid">
+          <article class="project-card" data-title="Progetto A" data-desc="Un progetto dimostrativo A." data-link="#">
+            <img src="https://via.placeholder.com/400x220" alt="Progetto A">
+            <div class="project-body">
+              <h4>Progetto A</h4>
+              <p>Breve descrizione del progetto A.</p>
+            </div>
           </article>
-          <article>
-            <h4>Veloce</h4>
-            <p>Design minimale per caricamento rapido.</p>
+          <article class="project-card" data-title="Progetto B" data-desc="Un progetto dimostrativo B." data-link="#">
+            <img src="https://via.placeholder.com/400x220" alt="Progetto B">
+            <div class="project-body">
+              <h4>Progetto B</h4>
+              <p>Breve descrizione del progetto B.</p>
+            </div>
           </article>
-          <article>
-            <h4>Interattivo</h4>
-            <p>Form di contatto con feedback immediato.</p>
+          <article class="project-card" data-title="Progetto C" data-desc="Un progetto dimostrativo C." data-link="#">
+            <img src="https://via.placeholder.com/400x220" alt="Progetto C">
+            <div class="project-body">
+              <h4>Progetto C</h4>
+              <p>Breve descrizione del progetto C.</p>
+            </div>
           </article>
         </div>
       </section>
 
       <section id="contact" class="container contact">
-        <h3>Contattaci</h3>
+        <h3>Contattami</h3>
         <form id="contactForm">
           <label>Nome
             <input type="text" name="name" required>
@@ -62,6 +93,15 @@
           <p id="formMessage" class="form-message" aria-live="polite"></p>
         </form>
       </section>
+
+      <div id="projectModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Chiudi">✕</button>
+          <h4 id="modalTitle"></h4>
+          <p id="modalDesc"></p>
+          <a id="modalLink" class="btn" href="#">Apri progetto</a>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
