@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sito Demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Sito Demo</h1>
+        <button class="nav-toggle" aria-label="Apri menu">☰</button>
+        <nav class="nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Caratteristiche</a></li>
+            <li><a href="#contact">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero container">
+        <h2>Benvenuto</h2>
+        <p>Un sito web semplice creato per te.</p>
+        <a class="btn" href="#contact">Contattaci</a>
+      </section>
+
+      <section id="features" class="container features">
+        <h3>Caratteristiche</h3>
+        <div class="grid">
+          <article>
+            <h4>Responsive</h4>
+            <p>Adattabile a tutti i dispositivi.</p>
+          </article>
+          <article>
+            <h4>Veloce</h4>
+            <p>Design minimale per caricamento rapido.</p>
+          </article>
+          <article>
+            <h4>Interattivo</h4>
+            <p>Form di contatto con feedback immediato.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h3>Contattaci</h3>
+        <form id="contactForm">
+          <label>Nome
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Messaggio
+            <textarea name="message" required></textarea>
+          </label>
+          <button type="submit" class="btn">Invia</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Sito Demo — Creato con Copilot</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
